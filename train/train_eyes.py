@@ -1,7 +1,7 @@
 # Build EyeNet on CIFAR10
 # Torch Tensor Versioplotf CompressNode
 import sys
-conv3d_path = '/mnt/d/Implementation/VD/3DConv/utils'
+conv3d_path = '/mnt/d/Implementation/VD/QuadTreeVision/utils'
 sys.path.append(conv3d_path)
 # QuadTree Img Compression Package
 from quadtree import *
@@ -12,15 +12,10 @@ from high_selection_experiment import *
 
 
 # Read From Pre-stored Args for CIFAR10
-config_path = '/mnt/d/Implementation/VD/3DConv/config'
-config_names = ['r1_acc_loss_compare_4layer_eyemix',
-                 'r1_acc_loss_compare_4layer_convmix',
-                 'r1_acc_loss_compare_3layer_convmix',
-                 'r1_acc_loss_compare_3layer_eyemix',
-                 'r1_acc_loss_compare_2layer_eyemix',
-                 'r1_acc_loss_compare_2layer_convmix',
-                 'r1_acc_loss_compare_1layer_convmix',
-                 'r1_acc_loss_compare_1layer_eyemix']
+config_path = '../config'
+config_names = ['eyemix3layer_mode1_eyemix',
+                 'eyemix3layer_mode3_eyemix',
+                 'eyemix3layer_mode4_eyemix']
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-n', '--cfg', type=int, default=0)
